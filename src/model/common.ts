@@ -12,6 +12,13 @@ export interface User {
     external_id?: string;
 }
 
+export interface Room {
+    room_id: number;
+    name: string;
+    created_on?: string;
+   
+}
+
 export interface Session {
     token: string;
     username?: string;
@@ -33,3 +40,6 @@ export interface ErrorCallback {
     (error: CustomError): void;
 }
 
+export interface Callback<T> {
+    (result: T): void;
+}

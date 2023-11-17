@@ -3,6 +3,8 @@ import './App.css';
 import {Login} from "./user/Login";
 import { Inscription } from './user/Inscription';
 
+import Messagerie from './principal/messagerie';
+
 function App() {
 
   return (
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />}></Route>
         <Route path="/inscription" element={<Inscription />}></Route>
+        <Route path="/messages" element={<Messagerie />}></Route>
+       
       </Routes>
       </BrowserRouter>
   );
