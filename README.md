@@ -24,7 +24,7 @@ La poursuite d'idées personnelles et l'ajout de fonctionnalités additionnelles
  - Installer les dépendances du projet : `npm install` ou `yarn install`
 
 Le projet peut à présent être exécuté en local, en se connectant au cache et la base de données distante, 
-avec la commande `vercel dev` 🎉
+avec la commande `d` 🎉
 
 La requête présente dans le fichier [scripts/db.sql](scripts/db.sql) permet d'initialiser un utilisateur `test / testubo`.
 Si tout est bon, il devrait permettre de se connecter sur l'ébauche de formulaire fourni.
