@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import { loginUser } from './loginApi';
 import { Session } from '../model/common';
 import { CustomError } from '../model/CustomError';
@@ -9,10 +9,12 @@ export function Login() {
   const [error, setError] = useState({} as CustomError);
   const [session, setSession] = useState({} as Session);
   const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
+    
     loginUser(
       { user_id: -1, username: data.get('login') as string, password: data.get('password') as string },
       (result: Session) => {
@@ -20,7 +22,9 @@ export function Login() {
         setSession(result);
         form.reset();
         setError(new CustomError(''));
-        navigate("/messages");
+
+        // Redirect to the "Messages" page after successful login
+        navigate('/messages');
       },
       (loginError: CustomError) => {
         console.log(loginError);
@@ -29,7 +33,6 @@ export function Login() {
       }
     );
   };
-
 
   return (
     <Container component="main" maxWidth="xs" sx={{ mt: '10rem' }}>
@@ -65,3 +68,4 @@ export function Login() {
     </Container>
   );
 }
+ 
