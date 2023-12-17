@@ -19,10 +19,19 @@ export interface Room {
    
 }
 
+export interface Message {
+
+    emetteur_id: string;
+    recepteur_id: string;
+    contenu: string;
+    created_on?: string;
+   
+}
+
 export interface Session {
     token: string;
     username?: string;
-    id?: number;
+    id?: string;
     externalId: string;
 }
 

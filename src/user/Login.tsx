@@ -4,6 +4,7 @@ import { Session } from '../model/common';
 import { CustomError } from '../model/CustomError';
 import { Button, TextField, Typography, Container, CssBaseline } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import NavBar from '../principal/navBar';
 
 export function Login() {
   const [error, setError] = useState({} as CustomError);
@@ -35,6 +36,8 @@ export function Login() {
   };
 
   return (
+    <div>
+      <NavBar/>
     <Container component="main" maxWidth="xs" sx={{ mt: '10rem' }}>
       <CssBaseline />
       <div>
@@ -66,6 +69,7 @@ export function Login() {
         {error.message && <Typography color="error">{error.message}</Typography>}
       </div>
     </Container>
+    </div>
   );
 }
  

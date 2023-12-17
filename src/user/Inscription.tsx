@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { inscriptionUser } from "./InscriptionApi";
 import { Session } from "../model/common";
 import { CustomError } from "../model/CustomError";
+
 import {
   Button,
   TextField,
@@ -10,6 +11,7 @@ import {
   Container,
   CssBaseline,
 } from "@mui/material";
+import NavBar from "../principal/navBar";
 
 export function Inscription() {
   const [error, setError] = useState({} as CustomError);
@@ -45,9 +47,12 @@ export function Inscription() {
   };
 
   return (
+    <div>
+       <NavBar/>
     <Container component="main" maxWidth="xs" sx={{ mt: "8rem" }}>
       <CssBaseline />
       <div>
+       
         <Typography
           component="h1"
           variant="h5"
@@ -106,5 +111,6 @@ export function Inscription() {
         )}
       </div>
     </Container>
+    </div>
   );
 }

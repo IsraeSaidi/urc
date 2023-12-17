@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Login />}></Route>
         <Route path="/inscription" element={<Inscription />}></Route>
         <Route path="/messages" element={<Messagerie/>}></Route>
+        <Route path="/messages/user/:user_id" element={<Messagerie/>}></Route>
        
       </Routes>
       </BrowserRouter>
